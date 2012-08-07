@@ -1,0 +1,10 @@
+div#foo {
+  margin: 0px;}
+
+  div#foo span.bar {
+    color: red;
+    font-weight: bold;}
+
+    div#foo span.bar a:hover {
+      text-decoration: none;}
+
