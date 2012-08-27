@@ -5,14 +5,13 @@
         [clojure-gap.css.styles]))
 
 (defpartial layout [& content]
+            (save-styles) ;Generate CSS at each refresh
             (html5
               [:head
                [:title "clojure-gap"]
                (include-css "/css/reset.css")
-               (include-css "/css/default.css")]
+               (include-css "/css/styles.css")]
               [:body
                [:div#wrapper
                 content]
-               (cljs/include-scripts :with-jquery)])
-  (save-styles)
-)
+               (cljs/include-scripts :with-jquery)]))

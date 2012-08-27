@@ -1,10 +1,6 @@
-div#foo {
-  margin: 0px;}
+div#content {
+  background: green;}
 
-  div#foo span.bar {
-    color: red;
-    font-weight: bold;}
-
-    div#foo span.bar a:hover {
-      text-decoration: none;}
+div#content {
+  background: blue;}
 

@@ -9,17 +9,17 @@
 ;; Dev stuff
 ;;************************************************
 
-(watcher/init)
+;(watcher/init)
 ;;(repl/connect "http://localhost:9000/repl")
 
 ;;************************************************
 ;; Code
 ;;************************************************
 
-(def $content ($ :#content))
+(def $content ($ :#content)) ;jayq calling jQuery
 
 (defpartial up-and-running []
-  [:p.alert "CLJS is compiled and active... Time to build something!"])
+  [:p "CLJS is compiled and active... Time to build something!"])
 
 (append $content (up-and-running))
 
