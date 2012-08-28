@@ -3,6 +3,7 @@
             [noir.cljs.core :as cljs]))
 
 (server/load-views-ns 'clojure-gap.views)
+
 (def cljs-options {:advanced {:externs ["externs/jquery.js"]}})
 
 (defn -main [& m]
