@@ -1,9 +1,10 @@
 (ns clojure-gap.css.styles
   (:require [clj-style.core :as cs]))
 
+(cs/reset-rules!)
+
 (cs/defrule  div-content
   [:div#content
-   :background "blue"])
+   :background "green"])
 
-(defn save-styles []
-  (cs/save "resources/public/css/styles.css"))
+(cs/save "resources/public/css/styles.css")

@@ -5,7 +5,6 @@
         [clojure-gap.css.styles]))
 
 (defpartial layout [& content]
-            (save-styles) ;Generate CSS at each refresh
             (html5
               [:head
                [:title "clojure-gap"]
@@ -13,6 +12,7 @@
                (include-css "css/styles.css")]
               [:body
                [:div#wrapper
-                content]
-               (cljs/include-scripts :with-jquery)]
-               (include-js "js/cordova-2.0.0.js")))
+                content]]
+             	(include-js "js/jquery-1.7.2.min.js")
+               	(include-js "js/cordova-2.0.0.js")
+          	   	(include-js "cljs/bootstrap.js")))
