@@ -56,6 +56,8 @@
  */
 - (BOOL) application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {    
+     
+    [NSClassFromString(@"WebView") _enableRemoteInspector];
     NSURL* url = [launchOptions objectForKey:UIApplicationLaunchOptionsURLKey];
     NSString* invokeString = nil;
     
@@ -73,7 +75,7 @@
     self.viewController = [[[MainViewController alloc] init] autorelease];
     self.viewController.useSplashScreen = YES;
     self.viewController.wwwFolderName = @"www";
-    self.viewController.startPage = @"index.html";
+    self.viewController.startPage = @"resources/public/index.html";
     self.viewController.invokeString = invokeString;
     self.viewController.view.frame = viewBounds;
     

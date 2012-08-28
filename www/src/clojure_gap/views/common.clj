@@ -9,8 +9,8 @@
             (html5
               [:head
                [:title "clojure-gap"]
-               (include-css "/css/reset.css")
-               (include-css "/css/styles.css")]
+               (include-css "css/reset.css")
+               (include-css "css/styles.css")]
               [:body
                [:div#wrapper
                 content]
