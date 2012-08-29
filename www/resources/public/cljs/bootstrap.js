@@ -14295,11 +14295,11 @@ clojure_gap.client.main.alertPosition = function() {
   return navigator.geolocation.getCurrentPosition.call(null, clojure_gap.client.main.onSuccess, clojure_gap.client.main.onError)
 };
 goog.exportSymbol("clojure_gap.client.main.alertPosition", clojure_gap.client.main.alertPosition);
-var group__4206__auto____5304 = cljs.core.swap_BANG_.call(null, crate.core.group_id, cljs.core.inc);
+var group__4206__auto____5691 = cljs.core.swap_BANG_.call(null, crate.core.group_id, cljs.core.inc);
 clojure_gap.client.main.get_position = function() {
-  var a = crate.core.html.call(null, cljs.core.Vector.fromArray(["\ufdd0'p", cljs.core.ObjMap.fromObject(["\ufdd0'onclick"], {"\ufdd0'onclick":"clojure_gap.client.main.alertPosition(this); return false;"}), "\u27a4"]));
-  a.setAttribute("crateGroup", group__4206__auto____5304);
+  var a = crate.core.html.call(null, cljs.core.Vector.fromArray(["\ufdd0'p#arrow", cljs.core.ObjMap.fromObject(["\ufdd0'onclick"], {"\ufdd0'onclick":"clojure_gap.client.main.alertPosition(this); return false;"}), "\u27a4"]));
+  a.setAttribute("crateGroup", group__4206__auto____5691);
   return a
 };
-clojure_gap.client.main.get_position.prototype._crateGroup = group__4206__auto____5304;
+clojure_gap.client.main.get_position.prototype._crateGroup = group__4206__auto____5691;
 jayq.core.append.call(null, clojure_gap.client.main.$content, clojure_gap.client.main.get_position.call(null));

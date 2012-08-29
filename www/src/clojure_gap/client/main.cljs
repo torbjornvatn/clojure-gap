@@ -20,6 +20,6 @@
   (js/navigator.geolocation.getCurrentPosition onSuccess onError))
 
 (defpartial get-position []
-            [:p {:onclick "clojure_gap.client.main.alertPosition(this); return false;"} "➤"])
+            [:p#arrow {:onclick "clojure_gap.client.main.alertPosition(this); return false;"} "➤"])
 
 (append $content (get-position))
