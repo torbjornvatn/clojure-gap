@@ -18,13 +18,13 @@ clojure_gap.client.main.alertPosition = (function alertPosition(){
 return navigator['geolocation']['getCurrentPosition'].call(null,clojure_gap.client.main.onSuccess,clojure_gap.client.main.onError);
 });
 goog.exportSymbol('clojure_gap.client.main.alertPosition', clojure_gap.client.main.alertPosition);
-var group__4206__auto____5691 = cljs.core.swap_BANG_.call(null,crate.core.group_id,cljs.core.inc);
+var group__4206__auto____5697 = cljs.core.swap_BANG_.call(null,crate.core.group_id,cljs.core.inc);
 
 clojure_gap.client.main.get_position = (function get_position(){
-var elem__4207__auto____5692 = crate.core.html.call(null,cljs.core.Vector.fromArray(["\uFDD0'p#arrow",cljs.core.ObjMap.fromObject(["\uFDD0'onclick"],{"\uFDD0'onclick":"clojure_gap.client.main.alertPosition(this); return false;"}),"\u27A4"]));
+var elem__4207__auto____5698 = crate.core.html.call(null,cljs.core.Vector.fromArray(["\uFDD0'p#arrow",cljs.core.ObjMap.fromObject(["\uFDD0'onclick"],{"\uFDD0'onclick":"clojure_gap.client.main.alertPosition(this); return false;"}),"\u27A4"]));
 
-elem__4207__auto____5692.setAttribute("crateGroup",group__4206__auto____5691);
-return elem__4207__auto____5692;
+elem__4207__auto____5698.setAttribute("crateGroup",group__4206__auto____5697);
+return elem__4207__auto____5698;
 });
-clojure_gap.client.main.get_position.prototype._crateGroup = group__4206__auto____5691;
+clojure_gap.client.main.get_position.prototype._crateGroup = group__4206__auto____5697;
 jayq.core.append.call(null,clojure_gap.client.main.$content,clojure_gap.client.main.get_position.call(null));
