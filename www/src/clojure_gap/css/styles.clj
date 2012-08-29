@@ -3,8 +3,13 @@
 
 (cs/reset-rules!)
 
-(cs/defrule  div-content
-  [:div#content
-   :background "green"])
+(cs/defrule div-wrapper
+            [:div#wrapper
+             :height "500px"])
+
+(cs/defrule div-content
+            [:div#content
+             :background "#BCFA99"
+             :height "100%"])
 
 (cs/save "resources/public/css/styles.css")

@@ -5,21 +5,21 @@
   (:use [jayq.core :only [$ append]])
   (:use-macros [crate.macros :only [defpartial]]))
 
-;;************************************************
-;; Dev stuff
-;;************************************************
-
-;(watcher/init)
-;;(repl/connect "http://localhost:9000/repl")
-
-;;************************************************
-;; Code
-;;************************************************
-
 (def $content ($ :#content)) ;jayq calling jQuery
 
-(defpartial up-and-running []
-  [:p "CLJS is compiled and active... Time to build something!"])
+(defn alert [text]
+  (js/navigator.notification.alert text nil "Din posisjon er"))
 
-(append $content (up-and-running))
+(defn onSuccess [position]
+  (alert (str "Lat: " js/position.coords.latitude "\nLong: " js/position.coords.longitude)))
 
+(defn onError [error]
+  (alert (str js/error.code)))
+
+(defn ^:export alertPosition []
+  (js/navigator.geolocation.getCurrentPosition onSuccess onError))
+
+(defpartial get-position []
+            [:p {:onclick "clojure_gap.client.main.alertPosition(this); return false;"} "➤"])
+
+(append $content (get-position))

@@ -14282,11 +14282,24 @@ clojure.browser.repl.connect = function(a) {
 var clojure_gap = {client:{}};
 clojure_gap.client.main = {};
 clojure_gap.client.main.$content = jayq.core.$.call(null, "\ufdd0'#content");
-var group__4169__auto____5345 = cljs.core.swap_BANG_.call(null, crate.core.group_id, cljs.core.inc);
-clojure_gap.client.main.up_and_running = function() {
-  var a = crate.core.html.call(null, cljs.core.Vector.fromArray(["\ufdd0'p", "CLJS is compiled and active... Time to build something!"]));
-  a.setAttribute("crateGroup", group__4169__auto____5345);
+clojure_gap.client.main.alert = function(a) {
+  return navigator.notification.alert.call(null, a, null, "Din posisjon er")
+};
+clojure_gap.client.main.onSuccess = function(a) {
+  return clojure_gap.client.main.alert.call(null, cljs.core.str.call(null, "Lat: ", a.coords.latitude, "\nLong: ", a.coords.longitude))
+};
+clojure_gap.client.main.onError = function(a) {
+  return clojure_gap.client.main.alert.call(null, cljs.core.str.call(null, a.code))
+};
+clojure_gap.client.main.alertPosition = function() {
+  return navigator.geolocation.getCurrentPosition.call(null, clojure_gap.client.main.onSuccess, clojure_gap.client.main.onError)
+};
+goog.exportSymbol("clojure_gap.client.main.alertPosition", clojure_gap.client.main.alertPosition);
+var group__4206__auto____5304 = cljs.core.swap_BANG_.call(null, crate.core.group_id, cljs.core.inc);
+clojure_gap.client.main.get_position = function() {
+  var a = crate.core.html.call(null, cljs.core.Vector.fromArray(["\ufdd0'p", cljs.core.ObjMap.fromObject(["\ufdd0'onclick"], {"\ufdd0'onclick":"clojure_gap.client.main.alertPosition(this); return false;"}), "\u27a4"]));
+  a.setAttribute("crateGroup", group__4206__auto____5304);
   return a
 };
-clojure_gap.client.main.up_and_running.prototype._crateGroup = group__4169__auto____5345;
-jayq.core.append.call(null, clojure_gap.client.main.$content, clojure_gap.client.main.up_and_running.call(null));
+clojure_gap.client.main.get_position.prototype._crateGroup = group__4206__auto____5304;
+jayq.core.append.call(null, clojure_gap.client.main.$content, clojure_gap.client.main.get_position.call(null));
