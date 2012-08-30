@@ -18,6 +18,7 @@
             [:p#arrow
              :font-size "400%"
              :color "#2FBEF9"
+             :text-shadow "-1px 1px 2px #333333"
              :-webkit-transform "rotate(-45deg)"
              :-webkit-tap-highlight-color "rgba(0,0,0,0)"])
 
